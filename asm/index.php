@@ -1,19 +1,13 @@
 <?php
 require_once './vendor/autoload.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
-use App\Controllers\HomeController;
-use App\Controllers\ProductController;
 switch ($url) {
     case 'login':
         // trang chủ - hiển thị danh sách sản phẩm theo danh mục
-        $ctr = new HomeController();
-        $ctr->index();
         break;
     case 'dashboard':
         // trang chi tiết sản phẩm sẽ có tham số đường dẫn ?id=xxx
         // hiển thị thông tin chi tiết của sản phẩm
-        $ctr = new ProductController();
-        $ctr->index();
         break;
     case 'mon-hoc':
         // hiển thị giao diện form tạo mới sản phẩm
