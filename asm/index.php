@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once './vendor/autoload.php';
 $url = isset($_GET['url']) ? $_GET['url'] : "/";
 \App\Helpers\Route::run($url);
