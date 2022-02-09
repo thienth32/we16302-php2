@@ -4,5 +4,8 @@
             "Controllers\\": "controllers",
             "Models\\": "models"
         }
+    },
+    "require": {
+        "nikic/fast-route": "^1.3"
     }
 }

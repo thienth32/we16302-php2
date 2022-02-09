@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Tổng users = <?= count($users) ?></h3>
+    asdlkfjaskjfaskjfaskjf 
+    hello
 </body>
 </html>
