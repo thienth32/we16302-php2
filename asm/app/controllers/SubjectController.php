@@ -11,6 +11,10 @@ class SubjectController{
         $name = $_POST['name'];
         var_dump($name);
     }
+
+    public function editForm($id, $name = "default"){
+        var_dump($id, $name);die;
+    }
 }
 
 ?>
