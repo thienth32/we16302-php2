@@ -5,6 +5,7 @@ use App\Controllers\DashboardController;
 use App\Controllers\HomeController;
 use App\Controllers\LoginController;
 use App\Controllers\SubjectController;
+use App\Models\Question;
 use \Phroute\Phroute\RouteCollector;
 class Route{
     public static function run($url){
@@ -33,6 +34,36 @@ class Route{
             });
             
         });
+
+        $router->post('add-question', function(){
+            
+            // $model = Question::create($_POST);
+            $model = new Question();
+            $_POST = [
+                'name' => 'câu hỏi',
+                'quiz_id' => 1,
+                'img' => ''
+            ];
+            
+            // $model->name = $_POST['name'];
+            // $model->quiz_id = $_POST['quiz_id'];
+            // $model->img = $_POST['img'];
+            $model->fill($_POST);
+            $model->save();
+            var_dump($model);
+        });
+
+        $router->post('edit-question/{id}', function($id){
+            $model = Question::find($id);
+            $model->fill($_POST);
+            $model->save();
+            var_dump($model);
+        });
+        // ví dụ:
+        // hóa đơn có 5 trạng thái (status): 1 - đặt hàng, 2 - xác nhận, 3 - giao hàng, 4 - hoàn thành, 5 - hủy
+        // lấy ra các hóa đơn có trạng thái 1, 3, 5
+        // Order::whereIn('status', [1, 3, 5])->get();
+        // Order::whereNotIn('status', [2, 4])->get();
         
 
 
