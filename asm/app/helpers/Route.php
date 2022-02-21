@@ -39,12 +39,6 @@ class Route{
             
             // $model = Question::create($_POST);
             $model = new Question();
-            $_POST = [
-                'name' => 'câu hỏi',
-                'quiz_id' => 1,
-                'img' => ''
-            ];
-            
             // $model->name = $_POST['name'];
             // $model->quiz_id = $_POST['quiz_id'];
             // $model->img = $_POST['img'];
@@ -59,6 +53,12 @@ class Route{
             $model->save();
             var_dump($model);
         });
+
+        $router->get('test-layout', function(){
+            return view('layouts.main');
+        });
+
+        $router->get('mon-hoc', [SubjectController::class, 'index']);
         // ví dụ:
         // hóa đơn có 5 trạng thái (status): 1 - đặt hàng, 2 - xác nhận, 3 - giao hàng, 4 - hoàn thành, 5 - hủy
         // lấy ra các hóa đơn có trạng thái 1, 3, 5

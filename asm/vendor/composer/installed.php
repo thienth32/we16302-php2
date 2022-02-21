@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '46bd1c6bb67f61409f18a33a3fe3bf99746dcfa6',
+        'reference' => '50fd5c3b95a53209b353abc2bfa10c5248e0e05a',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '46bd1c6bb67f61409f18a33a3fe3bf99746dcfa6',
+            'reference' => '50fd5c3b95a53209b353abc2bfa10c5248e0e05a',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -26,6 +26,15 @@
             'install_path' => __DIR__ . '/../doctrine/inflector',
             'aliases' => array(),
             'reference' => '8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89',
+            'dev_requirement' => false,
+        ),
+        'eftec/bladeone' => array(
+            'pretty_version' => '4.4.1',
+            'version' => '4.4.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../eftec/bladeone',
+            'aliases' => array(),
+            'reference' => '9e85a95c7b2e7871ccf0bdf11331359c70186f1e',
             'dev_requirement' => false,
         ),
         'illuminate/bus' => array(
